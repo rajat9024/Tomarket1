@@ -54,7 +54,7 @@ const SignInPage = ({ onSignInSuccess }) => {
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <div className="d-flex justify-content-between align-items-center mb-1">
                                 <Form.Label className="mb-0">Username or Email</Form.Label>
-                                <a href="#" className="text-decoration-none small text-primary">Remind me</a>
+                                <button className="text-decoration-none small text-primary">Remind me</button>
                             </div>
                             <Form.Control
                                 type="email" // Or 'text' for username
@@ -69,7 +69,7 @@ const SignInPage = ({ onSignInSuccess }) => {
                         <Form.Group className="mb-4" controlId="formBasicPassword">
                             <div className="d-flex justify-content-between align-items-center mb-1">
                                 <Form.Label className="mb-0">Password</Form.Label>
-                                <a href="#" className="text-decoration-none small text-primary">Forgot</a>
+                                <button className="text-decoration-none small text-primary">Forgot</button>
                             </div>
                             <Form.Control
                                 type="password"

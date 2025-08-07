@@ -76,8 +76,8 @@ const VideoPage = () => {
                                     </div>
                                 </div>
                                 <div className="d-flex justify-content-between align-items-center mb-3">
-                                    <a to="#" className="text-decoration-none small text-primary">Newest</a>
-                                    <a to="#" className="text-decoration-none small text-primary">Bestsellers</a>
+                                    <button className="text-decoration-none small text-primary">Newest</button>
+                                    <button className="text-decoration-none small text-primary">Bestsellers</button>
                                 </div>
                                 {category.items.map(item => (
                                     <Card key={item.id} className="mb-3 border-0 shadow-sm">
