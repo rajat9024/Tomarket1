@@ -2,7 +2,7 @@
 // src/App.jsx
 // Removed /* global */ comments as we are now providing a default config
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Dropdown, Button, Badge, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Badge, Nav } from 'react-bootstrap';
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 
 // Firebase Imports
@@ -42,7 +42,7 @@ const App = () => {
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedSubCategories, setSelectedSubCategories] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    const [sortBy, setSortBy] = useState('best-sellers');
+    const [sortBy] = useState('best-sellers');
     const [cartItems, setCartItems] = useState([]);
 
     const navigate = useNavigate();
