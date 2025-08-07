@@ -1,0 +1,35 @@
+/* src/index.css */
+/* Import Bootstrap CSS first */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+/* Import Bootstrap Icons CSS if you're using them with <i> tags */
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+/* Optional: If you're using Tailwind CSS alongside Bootstrap, add these */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* Global styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa; /* Light background color */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom styles for image object fit */
+.object-cover {
+    object-fit: cover;
+}
+
+/* Custom rounded-lg class (if not using Tailwind) */
+.rounded-lg {
+    border-radius: 0.5rem !important; /* Adjust as needed */
+}

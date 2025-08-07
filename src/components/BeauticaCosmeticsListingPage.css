@@ -1,0 +1,7 @@
+/* src/components/BeauticaCosmeticsListingPage.css */
+
+.beautica-cosmetics-page {
+    font-family: 'Open Sans', sans-serif; /* Use a clean, sans-serif font */
+    background-color: #f8f8f8; /* Light background similar to demo */
+    min-height: 100vh; /* Ensure it takes full viewport height */
+}

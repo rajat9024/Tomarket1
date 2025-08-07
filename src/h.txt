@@ -1,0 +1,44 @@
+const handleAddToCart = (product, quantity = 1) => {
+        console.log("--- handleAddToCart CALLED ---");
+        console.log("Product received:", product);
+        console.log("Quantity received:", quantity);
+
+        setCartItems(prevItems => {
+            console.log("Current cart items (prevItems) BEFORE update:", prevItems);
+
+            // IMPORTANT: Check if product or product.id is missing
+            if (!product || product.id === undefined || product.id === null) {
+                console.error("Error: Product or product.id is missing when attempting to add to cart.", { product });
+                alert("Could not add item to cart: Product data is incomplete.");
+                return prevItems; // Return previous items to avoid breaking the cart
+            }
+
+            const existingItemIndex = prevItems.findIndex(item => {
+                // Log both IDs for direct comparison
+                console.log(`Comparing existing item ID: '${item.product?.id}' with new product ID: '${product.id}'`);
+                return item.product?.id === product.id;
+            });
+
+            if (existingItemIndex > -1) {
+                // Product already in cart, update quantity
+                console.log("Product found in cart, updating quantity.");
+                const newItems = [...prevItems];
+                newItems[existingItemIndex] = {
+                    ...newItems[existingItemIndex],
+                    quantity: newItems[existingItemIndex].quantity + quantity
+                };
+                console.log("Cart after quantity update:", newItems);
+                return newItems;
+            } else {
+                // Product not in cart, add new item
+                console.log("Product not found in cart, adding as new item.");
+                const newItems = [...prevItems, { product, quantity }];
+                console.log("Cart after adding new item:", newItems);
+                return newItems;
+            }
+        });
+        // The alert here will fire before the state update is fully processed,
+        // but it gives immediate user feedback.
+        alert(`${product.name} added to cart!`);
+        console.log("--- handleAddToCart ENDED ---");
+    };
