@@ -1,6 +1,6 @@
 // src/components/SignInPage.jsx
 import React, { useState } from 'react';
-import { Container, Card, Form, Button, Row, Col } from 'react-bootstrap';
+import { Container, Card, Form, Button} from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css'; // For social media icons
 
 const SignInPage = ({ onSignInSuccess }) => {
